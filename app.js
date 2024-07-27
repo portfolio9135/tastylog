@@ -33,6 +33,9 @@ app.use("/public", express.static(path.join(__dirname, "/public")));
 app.use(accesslogger());
 
 // 【動的コンテンツの設定】【ルートの設定】
+//検索ページのルーティング設定
+app.use("/search", require("./routes/search.js"));
+
 //詳細ページのルーティング設定
 app.use("/shops", require("./routes/shops.js"));
 
